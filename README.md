@@ -7,4 +7,5 @@ Generative models, including both text-to-text and text-to-image modalities, hav
 ## Dataset
 
 https://huggingface.co/datasets/cyprivlab/Regen_COCO_prompts
+
 https://huggingface.co/datasets/cyprivlab/Regen_SatableDiffusion
