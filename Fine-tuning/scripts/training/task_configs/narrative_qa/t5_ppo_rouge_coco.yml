@@ -1,6 +1,6 @@
 tokenizer:
   #model_name: t5-base t5-small
-  model_name: /media/fenghe/Backup/fenghe/RL4LMs/imgprompt_ft/t5_coco/model
+  model_name: imgprompt_ft/t5_coco/model
   padding_side: left
   truncation_side: left
   pad_token_as_eos_token: False
@@ -50,7 +50,7 @@ alg:
   policy:
     id: seq2seq_lm_actor_critic_policy
     args:
-      model_name: /media/fenghe/Backup/fenghe/RL4LMs/imgprompt_ft/t5_coco/model
+      model_name: imgprompt_ft/t5_coco/model
       #model_name: Hydroflu/t5_small_retrained
       #model_name: t5-small
       apply_model_parallel: True

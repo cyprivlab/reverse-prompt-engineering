@@ -1,6 +1,6 @@
 tokenizer:
   #model_name: t5-base t5-small
-  model_name: /home/fenghe/Ans2Seq/real_world/DI_MED_t5_small_25e
+  model_name: Ans2Seq/real_world/DI_MED_t5_small_25e
   padding_side: left
   truncation_side: left
   pad_token_as_eos_token: False
@@ -50,7 +50,7 @@ alg:
   policy:
     id: seq2seq_lm_actor_critic_policy
     args:
-      model_name: /home/fenghe/Ans2Seq/real_world/DI_MED_t5_small_25e
+      model_name: Ans2Seq/real_world/DI_MED_t5_small_25e
       #model_name: Hydroflu/t5_small_retrained
       #model_name: t5-small
       apply_model_parallel: True
