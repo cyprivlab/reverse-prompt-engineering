@@ -30,8 +30,13 @@ The project uses the following datasets:
 2. Stable Diffusion Dataset:
    - Source: [Regen_SatableDiffusion](https://huggingface.co/datasets/cyprivlab/Regen_SatableDiffusion)
 
-3. Video Dataset(CogVideo):
+3. Video Dataset (CogVideo):
    - Source: [Gen_CogVideo_Video](https://huggingface.co/datasets/WenhaoWang/VidProM/resolve/main/example/cog_videos_example.tar)
+
+## Result
+   To view the video inversion results, please check the following folder:
+   - Video Inversion Results: [Video Inversion Results](video_prompt/video_prompt_inversion/Examples)
+
 
 ## Usage
 
