@@ -35,7 +35,7 @@ The project uses the following datasets:
 
 ## Result
    To view the video inversion results, please check the following folder:
-   - Video Inversion Results: [Video Inversion Results](video_prompt/video_prompt_inversion/Examples)
+   - Video Inversion Results: [Video Inversion Results](video_prompt_inversion/Examples)
 
 
 ## Usage
