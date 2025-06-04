@@ -20,6 +20,15 @@ Located in `text_prompt_inversion/`, this component focuses on text prompt inver
 - `a2q_test.ipynb`: Main implementation for text prompt inversion
 - `a2q_test_translated.ipynb`: Translated version of the text prompt inversion implementation
 
+### 3. Video Prompt Inversion
+Located in `video_prompt_inversion/`, this component focuses on video prompt inversion:
+
+- `video_inversion.ipynb`: Main implementation for video prompt inversion
+- `video_inversion_examples.ipynb`: Examples and demonstrations of video prompt inversion
+- `video_inversion_utils.py`: Utility functions for video prompt inversion
+- `video_inversion_models.py`: Model definitions for video prompt inversion
+
+
 ## Datasets
 
 The project uses the following datasets:
