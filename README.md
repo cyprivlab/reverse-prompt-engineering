@@ -30,6 +30,9 @@ The project uses the following datasets:
 2. Stable Diffusion Dataset:
    - Source: [Regen_SatableDiffusion](https://huggingface.co/datasets/cyprivlab/Regen_SatableDiffusion)
 
+3. Video Dataset(CogVideo):
+   - Source: [Gen_CogVideo_Video](https://huggingface.co/datasets/WenhaoWang/VidProM/resolve/main/example/cog_videos_example.tar)
+
 ## Usage
 
 Each component contains Jupyter notebooks that can be run independently to perform prompt inversion experiments. The notebooks include detailed implementations and comparisons of different methods.
