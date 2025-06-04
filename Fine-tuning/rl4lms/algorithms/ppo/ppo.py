@@ -205,11 +205,6 @@ class PPO(OnPolicyAlgorithm):
                 # self.verify_rollout_data(rollout_data)
                 actions = rollout_data.actions
 
-                #print('into tarin_PPO,actions:',actions)
-                with open("/home/fenghe/output.txt", "a") as f:
-                    f.write("into train_PPO, actions:"+" ".join(str(actions))+"\n")
-
-
                 if isinstance(self.action_space, spaces.Discrete):
                     # Convert discrete action from float to long
                     actions = rollout_data.actions.long().flatten()
@@ -258,10 +253,6 @@ class PPO(OnPolicyAlgorithm):
                         values - rollout_data.old_values, -clip_range_vf, clip_range_vf
                     )
 
-                with open("/home/fenghe/output.txt", "a") as f:
-                    f.write("into train_PPO, values_pred:"+" ".join(str(values_pred))+"\n")
-
-
                 # Value loss using the TD(gae_lambda) target
                 value_loss = F.mse_loss(rollout_data.returns, values_pred)
                 value_losses.append(value_loss.item())
@@ -293,9 +284,7 @@ class PPO(OnPolicyAlgorithm):
                         print(
                             f"Early stopping at step {epoch} due to reaching max kl: {approx_kl_div:.2f}")
                     break
-                
-                with open("/home/fenghe/output.txt", "a") as f:
-                    f.write("into train_PPO, Optimization step:"+" ".join(str(self.policy))+"\n")
+            
 
                 # Optimization step
                 self.policy.optimizer.zero_grad()
@@ -353,9 +342,6 @@ class PPO(OnPolicyAlgorithm):
         reset_num_timesteps: bool = True,
     ) -> "PPO":
         print('into learn:')
-        with open("/home/fenghe/output.txt", "a") as f:
-            f.write("into learn\n")
-
         return super().learn(
             total_timesteps=total_timesteps,
             callback=callback,

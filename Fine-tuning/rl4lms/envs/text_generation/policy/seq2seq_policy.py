@@ -98,13 +98,6 @@ class Seq2SeqLMActorCriticPolicy(LMActorCriticPolicy, ActorCriticWarmStartMixin)
         past_model_kwargs: Optional[Dict[str, torch.tensor]] = None,
     ) -> PolicyOutput:
 
-        #print('into seq2seq_policy.py_forward_policy,actions:',actions)
-        with open("/home/fenghe/output.txt", "a") as f:
-            f.write("into seq2seq_policy.py_forward_policy,actions"+" ".join(str(actions))+"\n")
-
-        #print('into seq2seq_policy.py_forward_policy,obs:',obs)
-        with open("/home/fenghe/output.txt", "a") as f:
-            f.write("into seq2seq_policy.py_forward_policy,obs:"+" ".join(str(obs))+"\n")
 
         # Temp workaround for Seq2seq policy
         past_model_kwargs = None

@@ -1,13 +1,13 @@
-PREV_STAGE_CHECKPOINT="/home/fenghe/LongVU/checkpoints/cambrian_Llama3_2_3B"
-PATH_TO_JSON="/home/fenghe/LongVU/video_prompts.json"
-PATH_TO_FOLDER="/home/fenghe/vidprom/cog_videos_example"
+PREV_STAGE_CHECKPOINT="cambrian_Llama3_2_3B"
+PATH_TO_JSON="LongVU/video_prompts.json"
+PATH_TO_FOLDER="vidprom/cog_videos_example"
 VERSION="llama3"
 
 CUDA_VISIBLE_DEVICES=0 CUDA_LAUNCH_BLOCKING=1 TORCH_DISTRIBUTED_DEBUG=DETAIL torchrun --nproc_per_node=1 \
 longvu/train.py \
---output_dir "/home/fenghe/LongVU/output" \
+--output_dir "LongVU/output" \
 --input_model_filename $PREV_STAGE_CHECKPOINT \
---output_model_filename "/home/fenghe/LongVU/new_checkpoints/cambrian_llama3_2_3B/" \
+--output_model_filename "LongVU/new_checkpoints/cambrian_llama3_2_3B/" \
 --data_path $PATH_TO_JSON \
 --image_folder $PATH_TO_FOLDER \
 --model_max_length 2048 \

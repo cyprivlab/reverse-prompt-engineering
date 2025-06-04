@@ -38,7 +38,7 @@ def evaluate_on_samples(
     all_meta_infos = []
     n_samples = len(samples)
     
-    with open("/home/fenghe/output.txt", "a") as f:
+    with open("output.txt", "a") as f:
         f.write("Evaluating: "+ "batchsize:"+str(batch_size)+"\n" +"samples_len:"+str(n_samples)+"\nsamples"+' '.join(str(samples))+"\n")
         f.write("########################################################\n")
 
@@ -54,7 +54,7 @@ def evaluate_on_samples(
         all_prompt_texts.extend(batch_prompt_texts)
         all_meta_infos.extend(batch_meta_infos)
 
-    with open("/home/fenghe/output.txt", "a") as f:
+    with open("output.txt", "a") as f:
         f.write("compute metrics")
         f.write("########################################################\n")
 

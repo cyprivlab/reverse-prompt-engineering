@@ -315,7 +315,7 @@ class BLEURewardFunction(RewardFunction):
         if done:
             references = [next_observation.target_or_reference_texts]
             predicted = [next_observation.context_text.replace('enquiry: ','')]
-            with open("/home/fenghe/output.txt", "a") as f:
+            with open("output.txt", "a") as f:
                 # caller_frame = inspect.stack()[1]
                 # print(str(caller_frame))
                 # caller_name = caller_frame[1]
@@ -324,10 +324,10 @@ class BLEURewardFunction(RewardFunction):
                 # f.write(f"Function '{caller_frame}'\n")
                 f.write("call metic\n Reward func: reference:"+" ".join(str(references))+"\n"+"predicted:"+" ".join(str(predicted))+"\n")
             metric_results = self._metric.compute(None, predicted, references)
-            with open("/home/fenghe/output.txt", "a") as f:
+            with open("output.txt", "a") as f:
                 f.write("reward metric result:"+" ".join(str(metric_results))+"\n")
             bleu_score = metric_results["lexical/bleu"][1]
-            with open("/home/fenghe/output.txt", "a") as f:
+            with open("output.txt", "a") as f:
                 f.write("bleu_score:"+" ".join(str(bleu_score))+"\n")
             return bleu_score
         return 0

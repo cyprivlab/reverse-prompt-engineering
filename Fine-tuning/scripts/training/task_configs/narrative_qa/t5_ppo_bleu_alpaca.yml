@@ -1,6 +1,6 @@
 tokenizer:
   #model_name: t5-base t5-small
-  model_name: /media/fenghe/Backup/fenghe/Ans2Seq/compare_work/DI_alpaca_0.2_t5_small_30e
+  model_name: DI_alpaca_0.2_t5_small_30e
   padding_side: left
   truncation_side: left
   pad_token_as_eos_token: False

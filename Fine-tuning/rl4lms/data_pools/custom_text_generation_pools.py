@@ -657,7 +657,6 @@ class AlpacaGPT4(TextGenPool):
     @classmethod
     def prepare(cls,split: str='train', prompt_suffix: str = "", prompt_prefix: str = ""):
         """ Prepare the dataset by formatting prompts and references. """
-                #dataset = datasets.Dataset.from_pandas(pandas.read_parquet('/home/fenghe/alpaca_gpt4/alpacagpt4_train.parquet').head(10000))
 
         dataset = load_dataset("vicgalle/alpaca-gpt4")
         dataset = dataset['train'].shuffle().select(range(10000))
@@ -697,9 +696,8 @@ class GPTRQA(TextGenPool):
     @classmethod
     def prepare(cls,split: str='train', prompt_suffix: str = "", prompt_prefix: str = ""):
         """ Prepare the dataset by formatting prompts and references. """
-                #dataset = datasets.Dataset.from_pandas(pandas.read_parquet('/home/fenghe/alpaca_gpt4/alpacagpt4_train.parquet').head(10000))
 
-        dataset = load_from_disk("/media/fenghe/Backup/fenghe/Ans2Seq/ChatGPT_RetrievalQA")
+        dataset = load_from_disk("ChatGPT_RetrievalQA")
         dataset = dataset['train'].shuffle().select(range(10000))
 
         if dataset is None:
@@ -737,9 +735,8 @@ class MediData(TextGenPool):
     @classmethod
     def prepare(cls,split: str='train', prompt_suffix: str = "", prompt_prefix: str = ""):
         """ Prepare the dataset by formatting prompts and references. """
-                #dataset = datasets.Dataset.from_pandas(pandas.read_parquet('/home/fenghe/alpaca_gpt4/alpacagpt4_train.parquet').head(10000))
 
-        dataset = load_from_disk("/media/fenghe/Backup/fenghe/Ans2Seq/real_world/med_data_0.2-train")
+        dataset = load_from_disk("med_data_0.2-train")
         #dataset = dataset['train'].shuffle().select(range(10000))
 
         if dataset is None:
@@ -778,9 +775,8 @@ class COCO(TextGenPool):
     @classmethod
     def prepare(cls,split: str='train', prompt_suffix: str = "", prompt_prefix: str = ""):
         """ Prepare the dataset by formatting prompts and references. """
-                #dataset = datasets.Dataset.from_pandas(pandas.read_parquet('/home/fenghe/alpaca_gpt4/alpacagpt4_train.parquet').head(10000))
 
-        dataset = load_from_disk("/media/fenghe/Backup/fenghe/RL4LMs/imgprompt_ft/coco-gen-0.2-train")
+        dataset = load_from_disk("coco-gen-0.2-train")
         #dataset = dataset['train'].shuffle().select(range(10000))
 
         if dataset is None:
@@ -818,10 +814,8 @@ class SDDA(TextGenPool):
     @classmethod
     def prepare(cls,split: str='train', prompt_suffix: str = "", prompt_prefix: str = ""):
         """ Prepare the dataset by formatting prompts and references. """
-                #dataset = datasets.Dataset.from_pandas(pandas.read_parquet('/home/fenghe/alpaca_gpt4/alpacagpt4_train.parquet').head(10000))
 
-        #dataset = load_from_disk("/home/fenghe/RL4LMs/imgprompt_ft/sd-gen-0.2-train")
-        dataset = load_from_disk('/media/fenghe/Backup/fenghe/Image2Text_inversion/RLdataset/RL_train_sd_wxtest')
+        dataset = load_from_disk('Image2Text_inversion/RLdataset/RL_train_sd_wxtest')
         #dataset = dataset['train'].shuffle().select(range(10000))
 
         if dataset is None:

@@ -1,6 +1,6 @@
 tokenizer:
   #model_name: t5-base t5-small
-  model_name: "/home/fenghe/Ans2Seq/Llama2-7b"
+  model_name: "Llama2-7b"
   padding_side: left
   truncation_side: left
   pad_token_as_eos_token: False
@@ -48,7 +48,7 @@ alg:
   policy:
     id: seq2seq_lm_actor_critic_policy
     args:
-      model_name: "/home/fenghe/Ans2Seq/Llama2-7b"
+      model_name: "Llama2-7b"
       #model_name: t5-small
       apply_model_parallel: True
       prompt_truncation_side: "right"

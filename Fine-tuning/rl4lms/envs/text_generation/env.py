@@ -132,21 +132,6 @@ class TextGenEnv(Env):
         else:
             reward = -inf  # will be overridden later
 
-        
-        with open("/home/fenghe/output.txt", "a") as f:
-            caller_frame = inspect.stack()[1]
-            # print(str(caller_frame))
-            #caller_name = caller_frame[1]
-            # print(str(caller_name))
-            # print(f"env.py-step Function '{caller_frame}'")
-            f.write(f"env.py-step Function: '{caller_frame}'\n")
-            f.write("into envs/text_generation/env.py,step, observation:"+" ".join(str(previous_obs))+"\n")
-        with open("/home/fenghe/output.txt", "a") as f:
-            f.write("into envs/text_generation/env.py,step, cur_observation:"+" ".join(str(self.__current_obs))+"\n")
-        with open("/home/fenghe/output.txt", "a") as f:
-            f.write("into envs/text_generation/env.py,step, reward:"+" ".join(str(reward))+"\n")
-        with open("/home/fenghe/output.txt", "a") as f:
-            f.write("into envs/text_generation/env.py,step, action:"+" ".join(str(action))+"\n")
 
         # populate additional info
         info = {
